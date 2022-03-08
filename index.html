@@ -1,0 +1,414 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+	
+	h1 {
+		font-size:32px;
+		font-weight:300;
+	}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		15px 15px 0 0px #fff, /* The fourth layer */
+		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		20px 20px 0 0px #fff, /* The fifth layer */
+		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		25px 25px 0 0px #fff, /* The fifth layer */
+		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+<html>
+<head>
+	<title>TransWeather</title>
+	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content="TransWeather" />
+	<meta property="og:description" content="Transformers for adverse weather removal" />
+
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src=""></script> 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-75863369-6');
+	</script>
+</head>
+
+<body>
+	<br>
+	<center>
+		<span style="font-size:36px">UNeXt: MLP-based Rapid Medical Image
+Segmentation Network</span>
+		<table align=center width=600px>
+			<table align=center width=600px>
+				<tr>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="https://jeya-maria-jose.github.io/research/">Jeya Maria Jose</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="https://engineering.jhu.edu/vpatel36/">Vishal M. Patel</a></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+			<table align=center width=500px>
+				<tr>
+					<td align=center width=200px>
+						<center>
+							<span style="font-size:24px"><a href='https://www.jhu.edu/'>Johns Hopkins University</a></span>
+						</center>
+					</td>
+					</td>
+				</tr>
+			</table>
+			<table align=center width=250px>
+				<tr>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:20px"><a href=''>[Paper]</a></span>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:20px"><a href='https://github.com/jeya-maria-jose/UNeXt-pytorch'>[GitHub]</a></span><br>
+						</center>
+					</td>
+				</tr>
+			</table>
+		</table>
+	</center>
+<br>
+	<center>
+		<table align=center width=850px>
+			<tr>
+				<td width=260px>
+					<center>
+						<img class="round" style="width:800px" src="./resources/fastunet-arch.png"/>
+					</center>
+				</td>
+			</tr>
+		</table>
+
+		<!-- <table align=center width=850px>
+			<tr>
+				<td>
+					 Transweather uses a single encoder-decoder architecture and learns weather type queries to solve weather removal.</a>
+				</td>
+			</tr>
+		</table> -->
+	</center>
+
+	<hr>
+
+	<table align=center width=1000px>
+		<center><h1>Introduction</h1></center>
+		<tr>
+			<td>
+				UNet and its latest extensions like TransUNet have been the leading medical image segmentation methods in recent years. However, these networks cannot be effectively adopted for rapid image segmentation in point-of-care applications as they are parameter-heavy, computationally complex and slow to use. To this end, we propose UNeXt which is a Convolutional multilayer perceptron (MLP) based network for image segmentation. We design UNeXt in an effective way with an early convolutional stage and a MLP stage in the latent stage. We propose a tokenized MLP block where we efficiently tokenize and project the convolutional features and use MLPs to model the representation. To further boost the performance, we propose shifting the channels of the inputs while feeding in to MLPs so as to focus on learning local dependencies. Using tokenized MLPs in latent space reduces the number of parameters and computational complexity while being able to result in a better representation to help segmentation. The network also consists of skip connections between various levels of encoder and decoder. We test UNeXt on multiple medical image segmentation datasets and show that we reduce the number of parameters by 72x, decrease the computational complexity by 68x, and improve the inference speed by 10x while also obtaining better segmentation performance over the state-of-theart medical image segmentation architectures. 
+			</td>
+		</tr>
+		
+	</table>
+
+
+
+	<!-- <hr>
+	<center><h1>Talk</h1></center>
+	<p align="center">
+		<iframe width="660" height="395" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe>
+	</p>
+
+	<table align=center width=800px>
+		<br>
+		<tr>
+			<center>
+				<span style="font-size:28px"><a href=''>[Slides]</a>
+				</span>
+			</center>
+		</tr>
+	</table>
+	<hr> -->
+	<br>
+<hr>
+	<center><h1>Motivation</h1></center>
+
+	<table align=center width=420px>
+
+		<center>
+			<tr>
+				<td>
+				</td>
+			</tr>
+		</center>
+	</table>
+
+	<table align=center width=800px>
+		<tr>
+			<td align=center width=400px>
+				<center>
+					<td><img class="round" style="width:800px" src="./resources/motivation.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<table align=center width=1000px>
+		<center>
+			<tr>
+				<td>
+					As medical imaging solutions become more applicable at point-of-care, it is important to focus on making the deep networks light-weight and fast while also being efficient. For example, point-of-care ultrasound (POCUS) devices phone camera based images are also being used to detect and diagnose skin conditions where we need light-weight networks with high inference speed.
+				</td>
+			</tr>
+		</center>
+	</table>
+	<!-- <table align=center width=800px>
+		<br>
+		<tr><center>
+			<span style="font-size:28px">&nbsp;<a href='https://github.com/richzhang/webpage-template'>[GitHub]</a>
+			</center>
+		</span>
+	</table> -->
+	<br>
+	<hr>
+	<center><h1>Method</h1></center>
+
+	
+
+	<table align=center width=1000px>
+		<center>
+			<tr>
+				<td>
+					UNeXt which is a convolutional and MLP-based network. We still follow a 5-layer deep encoder-decoder
+architecture of UNet with skip connections but change the design of each block.
+We have two stages in UNeXt- a convolutional stage followed by an MLP stage.
+We use convolutional blocks with less number of filters in the initial and final
+blocks of the network. In the bottleneck, we use a novel Tokenized MLP (TokMLP) block which is effective at maintaining less computation while also being
+able to model a good representation. Tokenized MLP projects the convolutional
+features into an abstract token and then uses MLPs to learn meaningful information for segmentation. We also introduce shifting operation in the MLPs to
+extract local information corresponding to different axial shifts. As the tokenized
+features are of the less dimensions and MLPs are less complicated than convolution or self-attention and transformers; we are able to reduce the number of
+parameters and computational complexity significantly while also maintaining
+a good performance.
+				</td>
+			</tr>
+		</center>
+	</table>
+
+<!-- 	<table align=center width=200px>
+		<tr>
+			<td align=center width=400px>
+				<center>
+					<td><center><img class="round" style="width:700px" src="./resources/shifting.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table> -->
+<br>
+	<hr>
+	<center><h1>Results</h1></center>
+
+	<table align=center width=200px>
+		<tr>
+			<td align=center width=400px>
+				<center>
+					<td><center><img class="round" style="width:1000px" src="./resources/results.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+
+	<table align=center width=1000px>
+		<center>
+			<tr>
+				<td>
+					We plot the comparison charts of F1 score vs. GLOPs, F1 score vs. Inference time and F1 Score vs. Number of Parameters. The F1 score used here corresponds to the ISIC dataset. It can be clearly seen from the charts that UNeXt and TransUNet are the best performing methods in terms of the segmentation performance. However, UNeXt clearly outperforms all the other networks in terms of computational complexity, inference time and number of parameters which are all important characteristics to consider for point-of-care imaging applications.
+				</td>
+			</tr>
+		</center>
+	</table>
+	<!-- <table align=center width=800px>
+		<center>
+			<tr>
+				<td>
+					<center>
+					
+				</td>
+			</tr>
+		</center>
+	</table>
+	<br>
+	<table align=center width=800px>
+		<tr>
+			<td align=center width=400px>
+				<center>
+					<td><img class="round" style="width:1000px" src="./resources/trwres2.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+	<table align=center width=800px>
+		<center>
+			<tr>
+				<td>
+					<center>
+					Some sample results on real-world weather degraded images.
+				</td>
+			</tr>
+		</center>
+	</table> -->
+	<!-- <table align=center width=800px>
+		<br>
+		<tr><center>
+			<span style="font-size:28px">&nbsp;<a href='https://github.com/richzhang/webpage-template'>[GitHub]</a>
+			</center>
+		</span>
+	</table> -->
+	<br>
+	<hr>
+	<table align=center width=450px>
+		<center><h1>Paper and Supplementary Material</h1></center>
+		<tr>
+			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
+			<td>
+				<b>UNeXt</b><br>
+				Tech Report<br>
+				(hosted on <a href="">ArXiv</a>)<br>
+				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
+				<span style="font-size:4pt"><a href=""><br></a>
+				</span>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+	<table align=center width=600px>
+		<tr>
+			<td><span style="font-size:14pt"><center>
+				<a href="./resources/bibtex.txt">[Bibtex]</a>
+			</center></td>
+		</tr>
+	</table>
+
+	<hr>
+	<br>
+
+	<table align=center width=900px>
+		<tr>
+			<td width=400px>
+				<left>
+					<center><h1>Acknowledgements</h1></center>
+					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
+				</left>
+			</td>
+		</tr>
+	</table>
+
+<br>
+</body>
+</html>
+
